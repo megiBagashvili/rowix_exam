@@ -1,8 +1,8 @@
 
 const TelegramBot = require('node-telegram-bot-api');
-const token = '8507207573:AAEXtjQ6kD0t7aLAGCn5S8VioWlo0Y_XBJg';
+const token = process.env.TOKEN;;
 const bot = new TelegramBot(token, { polling: true });
-const chatId = '-5246213073';
+const chatId = process.env.CHATID;
 
 bot.sendMessage(chatId, 'Server started');
 
